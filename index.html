@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anil Narayanan - Profile</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: clamp(1.8em, 2.5vw + 1em, 2.2em);
+      margin-bottom: 20px;
+      text-align: center;
+      color: #004466;
+    }
+
+    .profile-summary {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+      /* Center vertically */
+      height: 100%;
+      /* Ensure it takes the full height of the parent */
+      flex-direction: column;
+      /* Stack items vertically */
+      margin-right: 20px;
+      /* Maintain space to the right */
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      list-style: none;
+      /* Remove default bullet points */
+      padding: 0;
+      margin: 0;
+      display: flex;
+      /* Use flexbox for horizontal layout */
+      justify-content: space-around;
+      /* Evenly space the items */
+      /* background: #f8f9fa; */
+      /* Light background color */
+      /* border-radius: 8px; */
+      /* Rounded corners */
+      padding: 15px;
+      /* Padding for spacing */
+      /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+      /* Subtle shadow */
+      transition: background 0.3s;
+      /* Transition for hover effect */
+    }
+
+    .contact-info li {
+      display: flex;
+      /* Flexbox for icon and text alignment */
+      align-items: center;
+      /* Center items vertically */
+      color: #333;
+      /* Text color */
+      font-size: 1em;
+      /* Adjust font size */
+      margin-right: 20px;
+      /* Spacing between items */
+      position: relative;
+      /* Position for hover effect */
+      transition: transform 0.2s;
+      /* Smooth transition effect */
+    }
+
+    .contact-info li:last-child {
+      margin-right: 0;
+      /* Remove margin for the last item */
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      /* Space between icon and text */
+      color: #007bff;
+      /* Icon color */
+      font-size: 1.5em;
+      /* Slightly larger icons */
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      /* Remove underline from links */
+      color: #007bff;
+      /* Link color */
+      transition: color 0.2s;
+      /* Transition for link color */
+    }
+
+    .contact-info a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+    .contact-info .fa-copy {
+      margin-left: 10px;
+      /* Space before the copy icon */
+      cursor: pointer;
+      /* Change cursor to pointer */
+      color: #28a745;
+      /* Color for copy icon */
+      transition: color 0.2s;
+      /* Transition effect */
+    }
+
+    .contact-info .fa-copy:hover {
+      color: #218838;
+      /* Darker color on hover */
+    }
+
+    /* Styles for the copied message */
+    .copied-message {
+      position: absolute;
+      /* Positioning */
+      top: -20px;
+      /* Adjust positioning */
+      background-color: #28a745;
+      /* Green background */
+      color: white;
+      /* White text */
+      padding: 5px 10px;
+      /* Padding */
+      border-radius: 5px;
+      /* Rounded corners */
+      font-size: 0.9em;
+      /* Font size */
+      opacity: 0;
+      /* Initially hidden */
+      transition: opacity 0.5s;
+      /* Fade effect */
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 10px;
+      background: #e0e7ec;
+      color: #004466;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .section-title:hover {
+      background: #cfd8df;
+    }
+
+    .section-content {
+      padding-left: 20px;
+      padding-top: 10px;
+      border-left: 4px solid #004466;
+      display: none;
+      margin-top: 10px;
+    }
+
+    .summary-content {
+      flex-grow: 1;
+      /* Allow this section to take remaining space */
+      color: #333;
+      text-align: justify;
+      /* Justify the text */
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 20px;
+      color: #777;
+      font-size: 0.9em;
+      border-top: 1px solid #eaeaea;
+      margin-top: 30px;
+    }
+
+    .footer-links a {
+      color: #004466;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: #003244;
+    }
+
+    .job-role {
+      display: flex;
+      /* Use flexbox for layout */
+      justify-content: space-between;
+      /* Space between job title and duration */
+      align-items: center;
+      /* Center items vertically */
+      margin: 10px 0;
+      /* Space between job roles */
+    }
+
+    .job-duration {
+      font-weight: normal;
+      /* Normal weight for the duration */
+      color: #777;
+      /* Gray color for the duration */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      /* Allow for rounded corners */
+      border-spacing: 0;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      /* Border for the entire table */
+      border-radius: 10px;
+      /* Rounded corners for the table */
+      overflow: hidden;
+      /* Ensures rounded corners are applied */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Optional shadow for depth */
+    }
+
+    th,
+    td {
+      padding: 12px;
+      /* Padding for table cells */
+      border-bottom: 1px solid #ddd;
+      /* Bottom border for table cells */
+      text-align: left;
+      /* Align text to the left */
+    }
+
+    thead th {
+      background-color: #f4f4f4;
+      /* Background color for header cells */
+      border-bottom: 2px solid #ddd;
+      /* Bottom border for header cells */
+    }
+
+    tbody tr:hover {
+      background-color: #f9f9f9;
+      /* Highlight row on hover */
+    }
+
+    hr {
+      border: none;
+      /* Remove default border */
+      height: 2px;
+      /* Set height of the line */
+      background-color: #ddd;
+      /* Set color of the line */
+      margin: 10px 0;
+      /* Add top and bottom margin */
+      border-radius: 5px;
+      /* Rounded corners for the line */
+    }
+
+    /* Styles for skill cards */
+    #skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill-card {
+      background-color: #f9f9f9;
+      /* Light background for contrast */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Soft shadow for depth */
+      padding: 20px;
+      flex: 1 1 300px;
+      /* Flex basis for responsiveness */
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: transform 0.2s ease-in-out;
+      /* Smooth hover effect */
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      /* Lift effect on hover */
+    }
+
+    .skill-card h3 {
+      font-size: 1.25em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .skill-card p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .skill-card p strong {
+      color: #333;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Anil Narayanan</h1>
+    <div class="profile-summary">
+      <div class="profile-container">
+        <img src="me.jpeg" alt="Anil Narayanan" class="avatar">
+      </div>
+
+      <div class="summary-content">
+        <p>Open Group Certified Solution Architect with over 18 years of experience in Enterprise and Cloud
+          Architecture, Application Modernization, DevOps, and Full Stack Development. Skilled in implementing AI/ML
+          solutions and automation frameworks across Financial Services, Automotive, IT, Retail, and Government sectors.
+          Proven track record of leading teams to deliver innovative solutions, including AI/ML projects and
+          automation-driven efficiency improvements.</p>
+      </div>
+    </div>
+
+    <ul class="contact-info">
+      <li>
+        <i class="fas fa-map-marker-alt"></i>
+        <strong>Location:</strong> Bangalore, India
+      </li>
+      <li>
+        <i class="fas fa-envelope"></i>
+        <strong>Email:</strong>
+        <a href="mailto:narayanan.anil@gmail.com" id="email">narayanan.anil@gmail.com</a>
+        <i class="fas fa-copy" onclick="copyToClipboard('narayanan.anil@gmail.com', this)" title="Copy Email"></i>
+        <span class="copied-message">Copied</span>
+      </li>
+      <li>
+        <i class="fas fa-phone-alt"></i>
+        <strong>Phone:</strong> +91-9986641743
+        <i class="fas fa-copy" onclick="copyToClipboard('+91-9986641743', this)" title="Copy Phone Number"></i>
+        <span class="copied-message">Copied</span>
+      </li>
+    </ul>
+
+    <div class="section">
+      <h2 class="section-title" onclick="toggleSection('skills')">Skills</h2>
+      <div class="section-content" id="skills">
+        <div class="skill-card">
+          <h3>Cloud & Infrastructure</h3>
+          <p>AWS, GCP, Azure, VMware, Kubernetes, Docker</p>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps & CI/CD</h3>
+          <p>GitHub Actions, Jenkins, Terraform, Ansible, Docker, Kubernetes</p>
+        </div>
+        <div class="skill-card">
+          <h3>Full Stack Development</h3>
+          <p><strong>Backend:</strong> Django, Flask, Spring Boot, PostgreSQL, SQLite, Cassandra, MongoDB, Redis,
+            Memcached, FAISS, Weaviate, Pinecone, Chroma, OpenSearch, Neo4j, Salesforce Apex</p>
+          <p><strong>Frontend:</strong> JavaScript, ReactJS, Bootstrap, Bulma, HTML, CSS, Salesforce Lightning</p>
+        </div>
+        <div class="skill-card">
+          <h3>AI/ML, Data Science & NLP</h3>
+          <p><strong>Technologies:</strong> LangChain, LangGraph, Langfuse, LlamaIndex, Azure & AWS AI Services,
+            NVIDIA NeMo Guardrails, TensorFlow, PyTorch, scikit-learn, Keras, Pandas, NumPy, Generative AI models,
+            spaCy, NLTK, Matplotlib, Seaborn, KNIME.</p>
+          <p><strong>Techniques:</strong> EDA, Data Preprocessing, Feature Engineering, Model Fine-tuning,
+            Statistical Analysis, Data Visualization, Hyperparameter Optimization, Model Performance Evaluation.</p>
+          <p><strong>Applications:</strong> Chatbot Development, Machine Translation, Agentic Workflows, Text
+            Classification, Sentiment Analysis, NER, RAG.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Generative AI & Automation</h3>
+          <p>OpenAI (GPT Models), LLAMA, Bert, Hugging Face, REST APIs.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Hybrid Cloud & BCDR</h3>
+          <p>VMware, OpenStack, AWS, Azure, GCP, Veeam, Zerto, AWS CloudEndure, SDDC, SDS, SDN.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Scraping & Insights</h3>
+          <p>BeautifulSoup, Scrapy, Selenium, OpenAI APIs, Large Language Models (LLMs).</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="section">
+      <h2 class="section-title" onclick="toggleSection('experience')">Professional Experience</h2>
+      <div class="section-content" id="experience">
+        <h3>Kyndryl Solutions Pvt. Ltd., Bangalore</h3>
+        <div class="job-role">
+          <span>Associate Director, Software Architecture</span>
+          <span class="job-duration">January 2023 - Present</span>
+        </div>
+        <ul>
+          <li><strong>Financial Services:</strong> Led the development of RBI's Unified Lending Interface (ULI),
+            integrating 18 lenders into a unified platform, launching 40+ services, handling over a million API calls,
+            and reducing loan processing times by 40%.</li>
+          <li><strong>Client: Grameen Bank:</strong> Enhanced sentiment analysis using Generative AI.</li>
+          <li><strong>Automotive:</strong> Developed an NLP-based chatbot for Hero Motor Corp.</li>
+          <li><strong>Client: Mercedes-Benz Research & Development India:</strong> Created a machine translation
+            solution using fine-tuned models.</li>
+          <li><strong>Infrastructure:</strong> Developed an automation engine for Kubernetes Kustomize overlays.</li>
+        </ul>
+
+        <h3>IBM India Pvt. Ltd., Bangalore</h3>
+        <div class="job-role">
+          <span>Cloud Solutions Architect / Software Engineer</span>
+          <span class="job-duration">March 2011 - Dec 2022</span>
+        </div>
+        <ul>
+          <li><strong>Domain: Modernization:</strong> Lead developer for IBM Software Defined Modernization platform.
+          </li>
+          <li><strong>Domain: Digital Identity Verification:</strong> Architected a solution with document and selfie
+            verification.</li>
+        </ul>
+
+        <h3>KPIT Cummins Infosystems Ltd., Bangalore</h3>
+        <div class="job-role">
+          <span>Subject Matter Expert</span>
+          <span class="job-duration">Nov 2009 - Mar 2011</span>
+        </div>
+        <ul>
+          <li>Resolved technical issues in firmware, middleware, and application software.</li>
+        </ul>
+
+        <h3>Hewlett Packard Enterprise, Bangalore</h3>
+        <div class="job-role">
+          <span>Technical Solutions Engineer</span>
+          <span class="job-duration">May 2007 - Nov 2009</span>
+        </div>
+        <ul>
+          <li>Supported HP Business Critical Enterprise clients on the VMware platform.</li>
+        </ul>
+
+        <h3>National Institute of Rural Development, Hyderabad</h3>
+        <div class="job-role">
+          <span>Software Engineer</span>
+          <span class="job-duration">June 2000 - Sep 2002</span>
+        </div>
+        <ul>
+          <li>Led the design and maintenance of the institution's web portal.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <h2 class="section-title" onclick="toggleSection('education')">Education</h2>
+      <div class="section-content" id="education">
+        <ul class="education">
+          <li>
+            <div style="display: flex; justify-content: space-between;">
+              <strong style="padding-right: 10px;">PGDBA, AI/ML</strong>
+              <span>2024-Present</span>
+            </div>
+            <div>IIIT, Bangalore</div>
+          </li>
+          <li>
+            <div style="display: flex; justify-content: space-between;">
+              <strong style="padding-right: 10px;">PGDBA, Software Engineering</strong>
+              <span>2019-2020</span>
+            </div>
+            <div>IIIT, Bangalore</div>
+          </li>
+          <li>
+            <div style="display: flex; justify-content: space-between;">
+              <strong style="padding-right: 10px;">M.S. Information Technology</strong>
+              <span>2003-2005</span>
+            </div>
+            <div>University of Southern Queensland, Australia</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title" onclick="toggleSection('certifications')">Certifications</h2>
+      <div class="section-content" id="certifications">
+        <ul class="certifications">
+          <li>Open Group Certified Solution Architect (Open CA)</li>
+          <li>Cisco Certified</li>
+          <li>VMware Certified Professional</li>
+          <li>RedHat Certified</li>
+          <li>HashiCorp Certified: Terraform Associate</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Anil Narayanan</p>
+      <div class="footer-links">
+        <a href="https://github.com/anilnarayanan" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/anilnarayanan" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const sectionContent = document.getElementById(id);
+      if (sectionContent.style.display === 'none' || sectionContent.style.display === '') {
+        sectionContent.style.display = 'block';
+      } else {
+        sectionContent.style.display = 'none';
+      }
+    }
+
+
+    function copyToClipboard(text, element) {
+      // Create a temporary textarea element
+      const tempInput = document.createElement("textarea");
+      tempInput.value = text; // Set the value to the text to copy
+      document.body.appendChild(tempInput); // Append the textarea to the body
+      tempInput.select(); // Select the text
+      document.execCommand("copy"); // Execute the copy command
+      document.body.removeChild(tempInput); // Remove the textarea from the DOM
+
+      // Show the copied message
+      const copiedMessage = element.nextElementSibling; // Get the next sibling element (the copied message)
+      copiedMessage.style.opacity = 1; // Make it visible
+
+      // Hide the message after 1 second
+      setTimeout(() => {
+        copiedMessage.style.opacity = 0; // Fade out the message
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>
