@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anil Narayanan - Profile</title>
-    <!-- Using a slightly newer version of Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -13,22 +12,19 @@
     <style>
         :root {
             --primary-color: #005a87;
-            /* Slightly adjusted blue */
             --secondary-color: #eef2f5;
-            /* Light background for sections/cards */
             --text-color: #333;
             --text-muted: #666;
             --accent-color: #007bff;
-            /* Accent for links/icons */
             --border-color: #dee2e6;
             --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             --hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            --timeline-color: var(--primary-color);
         }
 
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
-            /* Slightly off-white background */
             color: var(--text-color);
             margin: 0;
             padding: 25px;
@@ -46,40 +42,32 @@
 
         h1 {
             font-size: clamp(2em, 3vw + 1em, 2.8em);
-            /* Slightly larger */
             font-weight: 700;
             margin-bottom: 25px;
             text-align: center;
             color: var(--primary-color);
         }
 
-        /* --- Profile Header --- */
         .profile-header {
             display: flex;
             flex-direction: column;
-            /* Stack elements vertically on small screens */
             align-items: center;
             margin-bottom: 30px;
             gap: 20px;
-            /* Space between elements */
             text-align: center;
-            /* Center text for smaller screens */
         }
 
         .profile-avatar-container {
             flex-shrink: 0;
-            /* Prevent avatar from shrinking */
         }
 
         .avatar {
             width: 120px;
-            /* Slightly larger avatar */
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             border: 3px solid #fff;
-            /* Optional: adds a subtle border */
         }
 
         .profile-summary {
@@ -89,18 +77,14 @@
             font-size: 1.05em;
         }
 
-        /* --- Contact Info --- */
         .contact-info {
             list-style: none;
             padding: 20px 15px;
             margin: 30px 0;
             display: flex;
             flex-wrap: wrap;
-            /* Allow wrapping on smaller screens */
             justify-content: center;
-            /* Center items */
             gap: 25px;
-            /* Space between items */
             background: var(--secondary-color);
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -112,17 +96,13 @@
             color: var(--text-color);
             font-size: 0.95em;
             position: relative;
-            /* For copied message positioning */
         }
 
-        .contact-info i.fa-solid {
-            /* Target FontAwesome icons */
+        .contact-info i.fa-solid, .contact-info i.fa-brands {
             margin-right: 10px;
             color: var(--accent-color);
             font-size: 1.4em;
-            /* Slightly larger icons */
             width: 20px;
-            /* Fixed width for alignment */
             text-align: center;
         }
 
@@ -136,7 +116,6 @@
             color: var(--accent-color);
             transition: color 0.2s ease, text-decoration 0.2s ease;
             word-break: break-word;
-            /* Prevent long emails/numbers breaking layout */
         }
 
         .contact-info a:hover {
@@ -150,7 +129,6 @@
             color: #28a745;
             transition: color 0.2s ease, transform 0.2s ease;
             font-size: 1em;
-            /* Adjust size if needed */
         }
 
         .contact-info .copy-icon:hover {
@@ -158,11 +136,9 @@
             transform: scale(1.1);
         }
 
-        /* Improved Copied Message */
         .copied-message {
             position: absolute;
             bottom: 110%;
-            /* Position above the icon */
             left: 50%;
             transform: translateX(-50%);
             background-color: #28a745;
@@ -174,42 +150,31 @@
             transition: opacity 0.4s ease-in-out, bottom 0.4s ease-in-out;
             white-space: nowrap;
             pointer-events: none;
-            /* Prevent interaction */
             z-index: 10;
         }
 
         .copied-message.show {
             opacity: 1;
             bottom: 125%;
-            /* Move slightly further up when shown */
         }
 
-        /* --- Sections --- */
         .section {
             margin-bottom: 35px;
         }
 
         .section-title {
             font-size: 1.6em;
-            /* Larger section titles */
             font-weight: 500;
-            /* Medium weight */
             cursor: pointer;
             padding: 12px 20px;
             background: linear-gradient(135deg, #eaf0f5, #dde6ed);
-            /* Subtle gradient */
             color: var(--primary-color);
             border-radius: 8px;
             transition: background 0.3s ease, box-shadow 0.3s ease;
             display: flex;
-            /* Use flex to align title and icon */
             justify-content: space-between;
-            /* Push icon to the right */
             align-items: center;
-            margin-bottom: 0;
-            /* Remove default margin */
             border: 1px solid var(--border-color);
-            /* Subtle border */
         }
 
         .section-title:hover {
@@ -219,7 +184,6 @@
 
         .section-title .toggle-icon {
             font-size: 0.7em;
-            /* Smaller icon */
             transition: transform 0.3s ease;
         }
 
@@ -229,30 +193,18 @@
 
         .section-content {
             padding: 20px 25px;
-            /* More padding */
-            /* Removed border-left, handled by container styling */
             display: none;
-            /* Hidden by default */
-            margin-top: 0;
-            /* Remove margin */
             border: 1px solid var(--border-color);
-            /* Border around content */
             border-top: none;
-            /* Remove top border */
             border-radius: 0 0 8px 8px;
-            /* Match bottom corners */
             background-color: #fff;
-            /* Ensure background */
         }
 
-        /* --- Skills Section --- */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            /* Responsive grid */
             gap: 20px;
             padding-top: 15px;
-            /* Add some space from the title */
         }
 
         .skill-card {
@@ -278,7 +230,6 @@
             padding-bottom: 8px;
         }
 
-        /* Use lists for skills within cards */
         .skill-card ul {
             list-style: none;
             padding: 0;
@@ -290,21 +241,17 @@
             font-size: 0.95em;
             color: var(--text-muted);
             display: flex;
-            /* Align bullet/icon with text */
             align-items: flex-start;
         }
 
         .skill-card li::before {
             content: "\f005";
-            /* Font Awesome star icon */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            /* Solid */
             font-size: 0.7em;
             color: var(--accent-color);
             margin-right: 10px;
             margin-top: 5px;
-            /* Adjust vertical alignment */
         }
 
         .skill-card strong {
@@ -313,60 +260,102 @@
             margin-right: 5px;
         }
 
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
 
-        /* --- Experience Section --- */
-        #experience h3 {
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+            background: var(--timeline-color);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 60px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 3px var(--timeline-color);
+        }
+
+        .timeline-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .timeline-content h3 {
             font-size: 1.3em;
             color: var(--primary-color);
-            margin-top: 20px;
-            /* Space above company name */
+            margin-top: 0;
             margin-bottom: 5px;
         }
 
-        #experience .job-role {
+        .timeline-content .job-role {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-            /* Allow wrapping */
             margin-bottom: 10px;
             border-bottom: 1px dashed var(--border-color);
             padding-bottom: 5px;
         }
 
-        #experience .job-title {
+        .timeline-content .job-title {
             font-weight: 700;
             font-size: 1.1em;
             color: var(--text-color);
         }
 
-        #experience .job-duration {
+        .timeline-content .job-duration {
             font-weight: 400;
             color: var(--text-muted);
             font-size: 0.9em;
             font-style: italic;
             white-space: nowrap;
-            /* Prevent duration breaking */
             margin-left: 15px;
-            /* Space from title if wrapped */
         }
 
-        #experience ul {
+        .timeline-content h4 {
+            margin-top: 15px;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1.15em;
+        }
+
+        .timeline-content ul {
             list-style: disc;
-            /* Use standard bullets */
             margin-left: 20px;
             padding-left: 15px;
-            margin-bottom: 25px;
-            /* Space after each role's details */
+            margin-bottom: 0;
         }
 
-        #experience li {
+        .timeline-content li {
             margin-bottom: 8px;
             line-height: 1.6;
             text-align: justify;
         }
 
-        /* --- Education & Certifications --- */
         #education ul,
         #certifications ul {
             list-style: none;
@@ -383,10 +372,8 @@
         #education li::before,
         #certifications li::before {
             content: "\f058";
-            /* Font Awesome check-circle */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            /* Solid */
             color: var(--accent-color);
             position: absolute;
             left: 0;
@@ -404,13 +391,12 @@
         #education .degree {
             font-weight: 700;
             color: var(--text-color);
+            font-size: 1.1em;
             margin-right: 10px;
-            /* Space between degree and duration */
         }
 
         #education .institution {
             display: block;
-            /* Put institution on new line */
             color: var(--text-muted);
             font-size: 0.95em;
         }
@@ -422,7 +408,6 @@
             white-space: nowrap;
         }
 
-        /* --- Footer --- */
         footer {
             text-align: center;
             padding-top: 30px;
@@ -444,24 +429,19 @@
             text-decoration: underline;
         }
 
-        /* Responsive Adjustments */
         @media (min-width: 768px) {
             .profile-header {
                 flex-direction: row;
-                /* Side-by-side layout */
                 text-align: left;
-                /* Align text left */
                 gap: 30px;
             }
 
             .contact-info {
                 justify-content: space-around;
-                /* Space out items more */
             }
 
-            #experience .job-role {
+            .timeline-content .job-role {
                 flex-wrap: nowrap;
-                /* Prevent wrapping on larger screens */
             }
         }
 
@@ -477,7 +457,6 @@
             .contact-info {
                 flex-direction: column;
                 align-items: flex-start;
-                /* Align items left */
                 gap: 15px;
             }
 
@@ -487,7 +466,42 @@
 
             .skills-container {
                 grid-template-columns: 1fr;
-                /* Stack cards vertically */
+            }
+
+            .timeline-item {
+                padding-left: 40px;
+            }
+
+            .timeline::before {
+                left: 8px;
+            }
+
+            .timeline-item::before {
+                left: 5px;
+            }
+        }
+
+        @media print {
+            .copy-icon, .toggle-icon {
+                display: none;
+            }
+
+            .section-content {
+                display: block !important;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+                width: 100%;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            footer {
+                background-color: transparent;
             }
         }
     </style>
@@ -530,15 +544,16 @@
                title="Copy Phone Number"></i>
             <span class="copied-message">Copied!</span>
         </li>
+        <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/aknaraya" target="_blank">LinkedIn</a>
+        </li>
     </ul>
 
-    <!-- Skills Section -->
     <div class="section">
-        <!-- Added aria-expanded for accessibility -->
         <h2 class="section-title" onclick="toggleSection('skills', this)" aria-expanded="false" aria-controls="skills">
             Skills <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
         </h2>
-        <!-- Structured skill list using grid and cards -->
         <div class="section-content" id="skills">
             <div class="skills-container">
                 <div class="skill-card">
@@ -614,137 +629,135 @@
         </div>
     </div>
 
-    <!-- Professional Experience Section -->
     <div class="section">
         <h2 class="section-title" onclick="toggleSection('experience', this)" aria-expanded="true"
             aria-controls="experience">
             Professional Experience <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
-            <!-- Assuming it's expanded by default -->
         </h2>
-        <div class="section-content" id="experience" style="display: block;"> <!-- Assuming it's expanded by default -->
+        <div class="section-content" id="experience" style="display: block;">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Kyndryl Solutions Pvt. Ltd., Bangalore</h3>
+                        <div class="job-role">
+                            <span class="job-title">Associate Director, Software Architecture</span>
+                            <span class="job-duration">January 2023 - Present</span>
+                        </div>
+                        <h4>Financial Services</h4>
+                        <ul>
+                            <li><strong>RBI Unified Lending Interface:</strong> Led development integrating 18 lenders, launching
+                                40+ services, handling >1M API calls, reducing loan processing time by 40%.
+                            </li>
+                            <li><strong>Grameen Bank:</strong> Enhanced sentiment analysis accuracy using Generative AI techniques
+                                for improved customer insights.
+                            </li>
+                        </ul>
+                        <h4>Automotive</h4>
+                        <ul>
+                            <li><strong>Hero Motor Corp:</strong> Designed and implemented an agentic Q&A system featuring distinct
+                                quantitative (SQL-based) and qualitative (RAG with vector DBs, embeddings, bespoke scrapers)
+                                processing paths; utilized semantic routing (splitting/fusing) and LLMs within this agentic workflow
+                                for comprehensive, accurate product information retrieval, ensuring final output quality via
+                                guardrails & filters.
+                            </li>
+                            <li><strong>Honda Motorcycle & Scooter India Private Limited:</strong> Utilized advanced NLP to analyze
+                                customer sentiment from social media/reviews, generating insights for product development,
+                                marketing, and customer satisfaction.
+                            </li>
+                            <li><strong>Mercedes-Benz R&D India:</strong> Developed a multilingual translation framework fine-tuning
+                                GenAI models (Flan T5, MarianMT, Fairseq) on diverse datasets (OPUS, Huggingface) for key domains;
+                                achieved 75-80% manhour savings and 73.7% BLEU accuracy, enabling faster global content rollout.
+                            </li>
+                        </ul>
+                        <h4>Aviation / Transportation</h4>
+                        <ul>
+                            <li><strong>BIAL (Bangalore International Airport):</strong> Developed PoCs demonstrating Generative AI
+                                solutions to enhance passenger experience, automated social media analysis, advanced chatbot Q&A
+                                capabilities, and AI-driven avatars for digital kiosks.
+                            </li>
+                        </ul>
+                        <h4>Infrastructure & Automation</h4>
+                        <ul>
+                            <li><strong>Kaiser Permanente:</strong> Engineered an AI solution to automate Kubernetes Kustomize
+                                overlay creation, employing AI for discovery, template definition, and INI file generation based on
+                                existing overlays to enhance deployment consistency and efficiency.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-            <!-- Kyndryl -->
-            <h3>Kyndryl Solutions Pvt. Ltd., Bangalore</h3>
-            <div class="job-role">
-                <span class="job-title">Associate Director, Software Architecture</span>
-                <span class="job-duration">January 2023 - Present</span>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>IBM India Pvt. Ltd., Bangalore</h3>
+                        <div class="job-role">
+                            <span class="job-title">Cloud Solutions Architect / Software Engineer</span>
+                            <span class="job-duration">March 2011 - Dec 2022</span>
+                        </div>
+                        <h4>Platform Development & Modernization</h4>
+                        <ul>
+                            <li>Served as lead developer for the IBM Software Defined Modernization platform, contributing to core
+                                architecture and feature implementation for enterprise application migration.
+                            </li>
+                        </ul>
+                        <h4>Security & Identity</h4>
+                        <ul>
+                            <li>Architected a robust Digital Identity Verification solution incorporating document scanning and
+                                facial recognition technologies.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>KPIT Cummins Infosystems Ltd., Bangalore</h3>
+                        <div class="job-role">
+                            <span class="job-title">Subject Matter Expert</span>
+                            <span class="job-duration">Nov 2009 - Mar 2011</span>
+                        </div>
+                        <ul>
+                            <li>Provided expert-level technical troubleshooting and resolution across firmware, middleware, and
+                                application software layers for key enterprise clients.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Hewlett Packard Enterprise, Bangalore</h3>
+                        <div class="job-role">
+                            <span class="job-title">Technical Solutions Engineer</span>
+                            <span class="job-duration">May 2007 - Nov 2009</span>
+                        </div>
+                        <h4>Infrastructure & Virtualization Support</h4>
+                        <ul>
+                            <li>Delivered specialized technical support for HP Business Critical Enterprise clients, focusing on the
+                                VMware virtualization platform and related infrastructure.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>National Institute of Rural Development, Hyderabad</h3>
+                        <div class="job-role">
+                            <span class="job-title">Software Engineer</span>
+                            <span class="job-duration">June 2000 - Sep 2002</span>
+                        </div>
+                        <h4>Web Development (Government Sector)</h4>
+                        <ul>
+                            <li>Led the design, development, and ongoing maintenance of the institution's primary web portal,
+                                enhancing information dissemination.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- Sector Groupings for Kyndryl -->
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Financial Services</h4>
-            <ul>
-                <li><strong>RBI Unified Lending Interface:</strong> Led development integrating 18 lenders, launching
-                    40+ services, handling >1M API calls, reducing loan processing time by 40%.
-                </li>
-                <li><strong>Grameen Bank:</strong> Enhanced sentiment analysis accuracy using Generative AI techniques
-                    for improved customer insights.
-                </li>
-            </ul>
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Automotive</h4>
-            <ul>
-                <!-- Updated Hero Motor Corp Experience with "Agentic" -->
-                <li><strong>Hero Motor Corp:</strong> Designed and implemented an agentic Q&A system featuring distinct
-                    quantitative (SQL-based) and qualitative (RAG with vector DBs, embeddings, bespoke scrapers)
-                    processing paths; utilized semantic routing (splitting/fusing) and LLMs within this agentic workflow
-                    for comprehensive, accurate product information retrieval, ensuring final output quality via
-                    guardrails & filters.
-                </li>
-                <li><strong>Honda Motorcycle & Scooter India Private Limited:</strong> Utilized advanced NLP to analyze
-                    customer sentiment from social media/reviews, generating insights for product development,
-                    marketing, and customer satisfaction.
-                </li>
-                <li><strong>Mercedes-Benz R&D India:</strong> Developed a multilingual translation framework fine-tuning
-                    GenAI models (Flan T5, MarianMT, Fairseq) on diverse datasets (OPUS, Huggingface) for key domains;
-                    achieved 75-80% manhour savings and 73.7% BLEU accuracy, enabling faster global content rollout.
-                </li>
-            </ul>
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Aviation / Transportation</h4>
-            <ul>
-                <li><strong>BIAL (Bangalore International Airport):</strong> Developed PoCs demonstrating Generative AI
-                    solutions to enhance passenger experience, automated social media analysis, advanced chatbot Q&A
-                    capabilities, and AI-driven avatars for digital kiosks.
-                </li>
-            </ul>
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure &
-                Automation</h4>
-            <ul>
-                <li><strong>Kaiser Permanente:</strong> Engineered an AI solution to automate Kubernetes Kustomize
-                    overlay creation, employing AI for discovery, template definition, and INI file generation based on
-                    existing overlays to enhance deployment consistency and efficiency.
-                </li>
-            </ul>
-            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
+        </div>
+    </div>
 
-            <!-- IBM -->
-            <h3>IBM India Pvt. Ltd., Bangalore</h3>
-            <div class="job-role">
-                <span class="job-title">Cloud Solutions Architect / Software Engineer</span>
-                <span class="job-duration">March 2011 - Dec 2022</span>
-            </div>
-            <!-- Sector Groupings for IBM -->
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Platform Development &
-                Modernization</h4>
-            <ul>
-                <li>Served as lead developer for the IBM Software Defined Modernization platform, contributing to core
-                    architecture and feature implementation for enterprise application migration.
-                </li>
-            </ul>
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Security & Identity</h4>
-            <ul>
-                <li>Architected a robust Digital Identity Verification solution incorporating document scanning and
-                    facial recognition technologies.
-                </li>
-            </ul>
-            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-            <!-- KPIT -->
-            <h3>KPIT Cummins Infosystems Ltd., Bangalore</h3>
-            <div class="job-role">
-                <span class="job-title">Subject Matter Expert</span>
-                <span class="job-duration">Nov 2009 - Mar 2011</span>
-            </div>
-            <!-- Grouping for KPIT (If applicable, otherwise just list points) -->
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Technical Support (SME)</h4>
-            <ul>
-                <li>Provided expert-level technical troubleshooting and resolution across firmware, middleware, and
-                    application software layers for key enterprise clients.
-                </li>
-            </ul>
-            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-            <!-- HPE -->
-            <h3>Hewlett Packard Enterprise, Bangalore</h3>
-            <div class="job-role">
-                <span class="job-title">Technical Solutions Engineer</span>
-                <span class="job-duration">May 2007 - Nov 2009</span>
-            </div>
-            <!-- Grouping for HPE -->
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure & Virtualization
-                Support</h4>
-            <ul>
-                <li>Delivered specialized technical support for HP Business Critical Enterprise clients, focusing on the
-                    VMware virtualization platform and related infrastructure.
-                </li>
-            </ul>
-            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-            <!-- NIRD -->
-            <h3>National Institute of Rural Development, Hyderabad</h3>
-            <div class="job-role">
-                <span class="job-title">Software Engineer</span>
-                <span class="job-duration">June 2000 - Sep 2002</span>
-            </div>
-            <!-- Grouping for NIRD -->
-            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Web Development (Government
-                Sector)</h4>
-            <ul>
-                <li>Led the design, development, and ongoing maintenance of the institution's primary web portal,
-                    enhancing information dissemination.
-                </li>
-            </ul>
-        </div> <!-- End section-content for experience -->
-    </div> <!-- End section for experience -->
-
-    <!-- Education Section -->
     <div class="section">
         <h2 class="section-title" onclick="toggleSection('education', this)" aria-expanded="false"
             aria-controls="education">
@@ -777,7 +790,6 @@
         </div>
     </div>
 
-    <!-- Certifications Section -->
     <div class="section">
         <h2 class="section-title" onclick="toggleSection('certifications', this)" aria-expanded="false"
             aria-controls="certifications">
@@ -799,8 +811,6 @@
         <div class="footer-links">
             <a href="https://github.com/anilnarayanan" target="_blank" rel="noopener noreferrer"><i
                     class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/aknaraya" target="_blank" rel="noopener noreferrer"><i
-                    class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </footer>
 </div>
@@ -817,11 +827,7 @@
             icon.classList.remove('fa-chevron-up');
             icon.classList.add('fa-chevron-down');
         } else {
-            sectionContent.style.display = 'block'; // Or 'grid'/'flex' if needed, but 'block' usually works
-            // Special case for skills grid layout
-            if (id === 'skills') {
-                sectionContent.style.display = 'block'; // Keep it block, the container inside handles grid
-            }
+            sectionContent.style.display = 'block';
             headerElement.setAttribute('aria-expanded', 'true');
             icon.classList.remove('fa-chevron-down');
             icon.classList.add('fa-chevron-up');
@@ -829,21 +835,16 @@
     }
 
     function copyToClipboard(text, element) {
-        // Use the Clipboard API for modern browsers
         navigator.clipboard.writeText(text).then(() => {
-            // Find the sibling "Copied!" message relative to the clicked icon (element)
-            const copiedMessage = element.nextElementSibling; // Assumes message is immediate sibling
+            const copiedMessage = element.nextElementSibling;
             if (copiedMessage && copiedMessage.classList.contains('copied-message')) {
-                copiedMessage.classList.add('show'); // Add class to trigger transition
-
-                // Hide the message after 1.5 seconds
+                copiedMessage.classList.add('show');
                 setTimeout(() => {
-                    copiedMessage.classList.remove('show'); // Remove class to fade out
+                    copiedMessage.classList.remove('show');
                 }, 1500);
             }
         }).catch(err => {
             console.error('Failed to copy text: ', err);
-            // Fallback for older browsers (less common now)
             try {
                 const tempInput = document.createElement("textarea");
                 tempInput.style.position = "absolute";
@@ -853,8 +854,6 @@
                 tempInput.select();
                 document.execCommand("copy");
                 document.body.removeChild(tempInput);
-
-                // Show feedback (using the same mechanism)
                 const copiedMessage = element.nextElementSibling;
                 if (copiedMessage && copiedMessage.classList.contains('copied-message')) {
                     copiedMessage.classList.add('show');
@@ -864,20 +863,13 @@
                 }
             } catch (e) {
                 console.error('Fallback copy method failed:', e);
-                alert("Failed to copy. Please copy manually."); // Basic feedback
+                alert("Failed to copy. Please copy manually.");
             }
         });
     }
 
-    // Optional: Expand key sections by default on page load
     document.addEventListener('DOMContentLoaded', () => {
-        // Example: Expand Skills and Experience by default
-        const skillsHeader = document.querySelector('h2[aria-controls="skills"]');
         const experienceHeader = document.querySelector('h2[aria-controls="experience"]');
-
-        if (skillsHeader) {
-            toggleSection('skills', skillsHeader);
-        }
         if (experienceHeader) {
             toggleSection('experience', experienceHeader);
         }
