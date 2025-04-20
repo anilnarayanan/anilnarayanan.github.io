@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anil Narayanan - Profile</title>
     <!-- Using a slightly newer version of Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -492,337 +494,395 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Anil Narayanan</h1>
+<div class="container">
+    <h1>Anil Narayanan</h1>
 
-        <div class="profile-header">
-            <div class="profile-avatar-container">
-                <img src="me.jpeg" alt="Anil Narayanan" class="avatar">
-            </div>
-            <div class="profile-summary">
-                <p>Open Group Certified Solution Architect with over 18 years of experience in Enterprise and Cloud Architecture, Application Modernization, DevOps, and Full Stack Development. Skilled in implementing AI/ML solutions and automation frameworks across Financial Services, Automotive, IT, Retail, and Government sectors. Proven track record of leading teams to deliver innovative solutions, including AI/ML projects and automation-driven efficiency improvements.</p>
-            </div>
+    <div class="profile-header">
+        <div class="profile-avatar-container">
+            <img src="me.jpeg" alt="Anil Narayanan" class="avatar">
         </div>
-
-        <ul class="contact-info">
-            <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <strong>Location:</strong> Bangalore, India
-            </li>
-            <li>
-                <i class="fa-solid fa-envelope"></i>
-                <strong>Email:</strong>
-                <a href="mailto:narayanan.anil@gmail.com" id="email">narayanan.anil@gmail.com</a>
-                <i class="fa-solid fa-copy copy-icon" onclick="copyToClipboard('narayanan.anil@gmail.com', this)" title="Copy Email"></i>
-                <span class="copied-message">Copied!</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-phone"></i>
-                <strong>Phone:</strong> <a href="tel:+919986641743">+91-9986641743</a>
-                <i class="fa-solid fa-copy copy-icon" onclick="copyToClipboard('+919986641743', this)" title="Copy Phone Number"></i>
-                <span class="copied-message">Copied!</span>
-            </li>
-        </ul>
-
-        <!-- Skills Section -->
-        <div class="section">
-            <!-- Added aria-expanded for accessibility -->
-            <h2 class="section-title" onclick="toggleSection('skills', this)" aria-expanded="false" aria-controls="skills">
-                Skills <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-            </h2>
-            <!-- Structured skill list using grid and cards -->
-            <div class="section-content" id="skills">
-                <div class="skills-container">
-                    <div class="skill-card">
-                        <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
-                        <ul>
-                            <li><strong>Platforms:</strong> AWS, GCP, Azure, VMware</li>
-                            <li><strong>Containerization:</strong> Kubernetes, Docker</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-cogs"></i> DevOps & CI/CD</h3>
-                        <ul>
-                            <li><strong>Tools:</strong> GitHub Actions, Jenkins, Terraform, Ansible</li>
-                            <li><strong>Practices:</strong> Infrastructure as Code (IaC), Continuous Integration, Continuous Deployment</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-code"></i> Full Stack Development</h3>
-                        <ul>
-                            <li><strong>Backend:</strong> Django, Flask, Spring Boot, Salesforce Apex</li>
-                            <li><strong>Databases:</strong> PostgreSQL, SQLite, Cassandra, MongoDB, Redis, Memcached, Neo4j</li>
-                            <li><strong>Vector DBs:</strong> FAISS, Weaviate, Pinecone, Chroma, OpenSearch</li>
-                            <li><strong>Frontend:</strong> JavaScript, ReactJS, HTML, CSS, Bootstrap, Bulma, Salesforce Lightning</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-brain"></i> AI/ML, Data Science & NLP</h3>
-                        <ul>
-                            <li><strong>Frameworks/Libs:</strong> LangChain, LangGraph, Langfuse, LlamaIndex, TensorFlow, PyTorch, scikit-learn, Keras, Pandas, NumPy, spaCy, NLTK, Matplotlib, Seaborn</li>
-                            <li><strong>Platforms:</strong> Azure AI, AWS AI Services, NVIDIA NeMo Guardrails, KNIME</li>
-                            <li><strong>Models:</strong> Generative AI (GPT, LLAMA, Bert), Hugging Face models</li>
-                            <li><strong>Techniques:</strong> EDA, Preprocessing, Feature Engineering, Fine-tuning, RAG, Statistical Analysis, Visualization, Hyperparameter Optimization, Evaluation</li>
-                            <li><strong>Applications:</strong> Chatbots, Machine Translation, Agentic Workflows, Text Classification, Sentiment Analysis, NER</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-robot"></i> Generative AI & Automation</h3>
-                        <ul>
-                            <li><strong>LLMs:</strong> OpenAI (GPT Models), LLAMA, Bert</li>
-                            <li><strong>Ecosystem:</strong> Hugging Face Transformers & Libraries</li>
-                            <li><strong>APIs:</strong> REST API Development & Integration</li>
-                            <li><strong>Automation:</strong> Scripting, Workflow Orchestration</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-server"></i> Hybrid Cloud & BCDR</h3>
-                        <ul>
-                            <li><strong>Platforms:</strong> VMware (SDDC, SDS, SDN), OpenStack</li>
-                            <li><strong>Cloud:</strong> AWS, Azure, GCP Integration</li>
-                            <li><strong>BCDR Tools:</strong> Veeam, Zerto, AWS CloudEndure</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3><i class="fas fa-magnifying-glass-chart"></i> Data Scraping & Insights</h3>
-                        <ul>
-                            <li><strong>Web Scraping:</strong> BeautifulSoup, Scrapy, Selenium</li>
-                            <li><strong>Data Extraction:</strong> LLMs for unstructured data</li>
-                            <li><strong>Insight Generation:</strong> Utilizing OpenAI APIs and other LLMs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="profile-summary">
+            <p>Open Group Certified Solution Architect with over 18 years of experience in Enterprise and Cloud
+                Architecture, Application Modernization, DevOps, and Full Stack Development. Skilled in implementing
+                AI/ML solutions and automation frameworks across Financial Services, Automotive, IT, Retail, and
+                Government sectors. Proven track record of leading teams to deliver innovative solutions, including
+                AI/ML projects and automation-driven efficiency improvements.</p>
         </div>
-
-        <!-- Professional Experience Section -->
-        <div class="section">
-            <h2 class="section-title" onclick="toggleSection('experience', this)" aria-expanded="true" aria-controls="experience">
-                Professional Experience <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span> <!-- Assuming it's expanded by default -->
-            </h2>
-            <div class="section-content" id="experience" style="display: block;"> <!-- Assuming it's expanded by default -->
-
-                <!-- Kyndryl -->
-                <h3>Kyndryl Solutions Pvt. Ltd., Bangalore</h3>
-                <div class="job-role">
-                    <span class="job-title">Associate Director, Software Architecture</span>
-                    <span class="job-duration">January 2023 - Present</span>
-                </div>
-                <!-- Sector Groupings for Kyndryl -->
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Financial Services</h4>
-                <ul>
-                    <li><strong>RBI Unified Lending Interface:</strong> Led development integrating 18 lenders, launching 40+ services, handling >1M API calls, reducing loan processing time by 40%.</li>
-                    <li><strong>Grameen Bank:</strong> Enhanced sentiment analysis accuracy using Generative AI techniques for improved customer insights.</li>
-                </ul>
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Automotive</h4>
-                <ul>
-                    <!-- Updated Hero Motor Corp Experience with "Agentic" -->
-                    <li><strong>Hero Motor Corp:</strong> Designed and implemented an agentic Q&A system featuring distinct quantitative (SQL-based) and qualitative (RAG with vector DBs, embeddings, bespoke scrapers) processing paths; utilized semantic routing (splitting/fusing) and LLMs within this agentic workflow for comprehensive, accurate product information retrieval, ensuring final output quality via guardrails & filters.</li>
-                    <li><strong>Honda Motorcycle & Scooter India Private Limited:</strong> Utilized advanced NLP to analyze customer sentiment from social media/reviews, generating insights for product development, marketing, and customer satisfaction.</li>
-                    <li><strong>Mercedes-Benz R&D India:</strong> Developed a multilingual translation framework fine-tuning GenAI models (Flan T5, MarianMT, Fairseq) on diverse datasets (OPUS, Huggingface) for key domains; achieved 75-80% manhour savings and 73.7% BLEU accuracy, enabling faster global content rollout.</li>
-                </ul>
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Aviation / Transportation</h4>
-                <ul>
-                    <li><strong>BIAL (Bangalore International Airport):</strong> Developed PoCs demonstrating Generative AI solutions to enhance passenger experience, automated social media analysis, advanced chatbot Q&A capabilities, and AI-driven avatars for digital kiosks.</li>
-                </ul>
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure & Automation</h4>
-                <ul>
-                    <li><strong>Kaiser Permanente:</strong> Engineered an AI solution to automate Kubernetes Kustomize overlay creation, employing AI for discovery, template definition, and INI file generation based on existing overlays to enhance deployment consistency and efficiency.</li>
-                </ul>
-                <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-                <!-- IBM -->
-                <h3>IBM India Pvt. Ltd., Bangalore</h3>
-                <div class="job-role">
-                    <span class="job-title">Cloud Solutions Architect / Software Engineer</span>
-                    <span class="job-duration">March 2011 - Dec 2022</span>
-                </div>
-                <!-- Sector Groupings for IBM -->
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Platform Development & Modernization</h4>
-                <ul>
-                    <li>Served as lead developer for the IBM Software Defined Modernization platform, contributing to core architecture and feature implementation for enterprise application migration.</li>
-                </ul>
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Security & Identity</h4>
-                <ul>
-                    <li>Architected a robust Digital Identity Verification solution incorporating document scanning and facial recognition technologies.</li>
-                </ul>
-                <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-                <!-- KPIT -->
-                <h3>KPIT Cummins Infosystems Ltd., Bangalore</h3>
-                <div class="job-role">
-                    <span class="job-title">Subject Matter Expert</span>
-                    <span class="job-duration">Nov 2009 - Mar 2011</span>
-                </div>
-                <!-- Grouping for KPIT (If applicable, otherwise just list points) -->
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Technical Support (SME)</h4>
-                <ul>
-                    <li>Provided expert-level technical troubleshooting and resolution across firmware, middleware, and application software layers for key enterprise clients.</li>
-                </ul>
-                <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-                <!-- HPE -->
-                <h3>Hewlett Packard Enterprise, Bangalore</h3>
-                <div class="job-role">
-                    <span class="job-title">Technical Solutions Engineer</span>
-                    <span class="job-duration">May 2007 - Nov 2009</span>
-                </div>
-                <!-- Grouping for HPE -->
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure & Virtualization Support</h4>
-                <ul>
-                    <li>Delivered specialized technical support for HP Business Critical Enterprise clients, focusing on the VMware virtualization platform and related infrastructure.</li>
-                </ul>
-                <hr style="margin: 25px 0;"> <!-- Separator before next company -->
-
-                <!-- NIRD -->
-                <h3>National Institute of Rural Development, Hyderabad</h3>
-                <div class="job-role">
-                    <span class="job-title">Software Engineer</span>
-                    <span class="job-duration">June 2000 - Sep 2002</span>
-                </div>
-                <!-- Grouping for NIRD -->
-                <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Web Development (Government Sector)</h4>
-                <ul>
-                    <li>Led the design, development, and ongoing maintenance of the institution's primary web portal, enhancing information dissemination.</li>
-                </ul>
-            </div> <!-- End section-content for experience -->
-        </div> <!-- End section for experience -->
-
-        <!-- Education Section -->
-        <div class="section">
-            <h2 class="section-title" onclick="toggleSection('education', this)" aria-expanded="false" aria-controls="education">
-                Education <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-            </h2>
-            <div class="section-content" id="education">
-                <ul>
-                    <li>
-                        <div class="education-item">
-                            <span class="degree">PGDBA, AI/ML</span>
-                            <span class="duration">2024 - Present</span>
-                        </div>
-                        <span class="institution">IIIT, Bangalore</span>
-                    </li>
-                    <li>
-                        <div class="education-item">
-                            <span class="degree">PGDBA, Software Engineering</span>
-                            <span class="duration">2019 - 2020</span>
-                        </div>
-                        <span class="institution">IIIT, Bangalore</span>
-                    </li>
-                    <li>
-                        <div class="education-item">
-                            <span class="degree">M.S. Information Technology</span>
-                            <span class="duration">2003 - 2005</span>
-                        </div>
-                        <span class="institution">University of Southern Queensland, Australia</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Certifications Section -->
-        <div class="section">
-            <h2 class="section-title" onclick="toggleSection('certifications', this)" aria-expanded="false" aria-controls="certifications">
-                Certifications <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
-            </h2>
-            <div class="section-content" id="certifications">
-                <ul>
-                    <li>Open Group Certified Solution Architect (Open CA)</li>
-                    <li>Cisco Certified</li>
-                    <li>VMware Certified Professional</li>
-                    <li>RedHat Certified</li>
-                    <li>HashiCorp Certified: Terraform Associate</li>
-                </ul>
-            </div>
-        </div>
-
-        <footer>
-            <p>© 2024 Anil Narayanan</p>
-            <div class="footer-links">
-                <a href="https://github.com/anilnarayanan" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/anilnarayanan" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </footer>
     </div>
 
-    <script>
-        function toggleSection(id, headerElement) {
-            const sectionContent = document.getElementById(id);
-            const isExpanded = sectionContent.style.display === 'block';
-            const icon = headerElement.querySelector('.toggle-icon i');
+    <ul class="contact-info">
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <strong>Location:</strong> Bangalore, India
+        </li>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:anilkn@outlook.in" id="email">anilkn@outlook.in</a>
+            <i class="fa-solid fa-copy copy-icon" onclick="copyToClipboard('anilkn@outlook.in', this)"
+               title="Copy Email"></i>
+            <span class="copied-message">Copied!</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong> <a href="tel:+919986641743">+91-9986641743</a>
+            <i class="fa-solid fa-copy copy-icon" onclick="copyToClipboard('+919986641743', this)"
+               title="Copy Phone Number"></i>
+            <span class="copied-message">Copied!</span>
+        </li>
+    </ul>
 
-            if (isExpanded) {
-                sectionContent.style.display = 'none';
-                headerElement.setAttribute('aria-expanded', 'false');
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            } else {
-                sectionContent.style.display = 'block'; // Or 'grid'/'flex' if needed, but 'block' usually works
-                // Special case for skills grid layout
-                if (id === 'skills') {
-                    sectionContent.style.display = 'block'; // Keep it block, the container inside handles grid
-                }
-                headerElement.setAttribute('aria-expanded', 'true');
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
+    <!-- Skills Section -->
+    <div class="section">
+        <!-- Added aria-expanded for accessibility -->
+        <h2 class="section-title" onclick="toggleSection('skills', this)" aria-expanded="false" aria-controls="skills">
+            Skills <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </h2>
+        <!-- Structured skill list using grid and cards -->
+        <div class="section-content" id="skills">
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+                    <ul>
+                        <li><strong>Platforms:</strong> AWS, GCP, Azure, VMware</li>
+                        <li><strong>Containerization:</strong> Kubernetes, Docker</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-cogs"></i> DevOps & CI/CD</h3>
+                    <ul>
+                        <li><strong>Tools:</strong> GitHub Actions, Jenkins, Terraform, Ansible</li>
+                        <li><strong>Practices:</strong> Infrastructure as Code (IaC), Continuous Integration, Continuous
+                            Deployment
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Full Stack Development</h3>
+                    <ul>
+                        <li><strong>Backend:</strong> Django, Flask, Spring Boot, Salesforce Apex</li>
+                        <li><strong>Databases:</strong> PostgreSQL, SQLite, Cassandra, MongoDB, Redis, Memcached, Neo4j
+                        </li>
+                        <li><strong>Vector DBs:</strong> FAISS, Weaviate, Pinecone, Chroma, OpenSearch</li>
+                        <li><strong>Frontend:</strong> JavaScript, ReactJS, HTML, CSS, Bootstrap, Bulma, Salesforce
+                            Lightning
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-brain"></i> AI/ML, Data Science & NLP</h3>
+                    <ul>
+                        <li><strong>Frameworks/Libs:</strong> LangChain, LangGraph, Langfuse, LlamaIndex, TensorFlow,
+                            PyTorch, scikit-learn, Keras, Pandas, NumPy, spaCy, NLTK, Matplotlib, Seaborn
+                        </li>
+                        <li><strong>Platforms:</strong> Azure AI, AWS AI Services, NVIDIA NeMo Guardrails, KNIME</li>
+                        <li><strong>Models:</strong> Generative AI (GPT, LLAMA, Bert), Hugging Face models</li>
+                        <li><strong>Techniques:</strong> EDA, Preprocessing, Feature Engineering, Fine-tuning, RAG,
+                            Statistical Analysis, Visualization, Hyperparameter Optimization, Evaluation
+                        </li>
+                        <li><strong>Applications:</strong> Chatbots, Machine Translation, Agentic Workflows, Text
+                            Classification, Sentiment Analysis, NER
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-robot"></i> Generative AI & Automation</h3>
+                    <ul>
+                        <li><strong>LLMs:</strong> OpenAI (GPT Models), LLAMA, Bert</li>
+                        <li><strong>Ecosystem:</strong> Hugging Face Transformers & Libraries</li>
+                        <li><strong>APIs:</strong> REST API Development & Integration</li>
+                        <li><strong>Automation:</strong> Scripting, Workflow Orchestration</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-server"></i> Hybrid Cloud & BCDR</h3>
+                    <ul>
+                        <li><strong>Platforms:</strong> VMware (SDDC, SDS, SDN), OpenStack</li>
+                        <li><strong>Cloud:</strong> AWS, Azure, GCP Integration</li>
+                        <li><strong>BCDR Tools:</strong> Veeam, Zerto, AWS CloudEndure</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-magnifying-glass-chart"></i> Data Scraping & Insights</h3>
+                    <ul>
+                        <li><strong>Web Scraping:</strong> BeautifulSoup, Scrapy, Selenium</li>
+                        <li><strong>Data Extraction:</strong> LLMs for unstructured data</li>
+                        <li><strong>Insight Generation:</strong> Utilizing OpenAI APIs and other LLMs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Experience Section -->
+    <div class="section">
+        <h2 class="section-title" onclick="toggleSection('experience', this)" aria-expanded="true"
+            aria-controls="experience">
+            Professional Experience <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+            <!-- Assuming it's expanded by default -->
+        </h2>
+        <div class="section-content" id="experience" style="display: block;"> <!-- Assuming it's expanded by default -->
+
+            <!-- Kyndryl -->
+            <h3>Kyndryl Solutions Pvt. Ltd., Bangalore</h3>
+            <div class="job-role">
+                <span class="job-title">Associate Director, Software Architecture</span>
+                <span class="job-duration">January 2023 - Present</span>
+            </div>
+            <!-- Sector Groupings for Kyndryl -->
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Financial Services</h4>
+            <ul>
+                <li><strong>RBI Unified Lending Interface:</strong> Led development integrating 18 lenders, launching
+                    40+ services, handling >1M API calls, reducing loan processing time by 40%.
+                </li>
+                <li><strong>Grameen Bank:</strong> Enhanced sentiment analysis accuracy using Generative AI techniques
+                    for improved customer insights.
+                </li>
+            </ul>
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Automotive</h4>
+            <ul>
+                <!-- Updated Hero Motor Corp Experience with "Agentic" -->
+                <li><strong>Hero Motor Corp:</strong> Designed and implemented an agentic Q&A system featuring distinct
+                    quantitative (SQL-based) and qualitative (RAG with vector DBs, embeddings, bespoke scrapers)
+                    processing paths; utilized semantic routing (splitting/fusing) and LLMs within this agentic workflow
+                    for comprehensive, accurate product information retrieval, ensuring final output quality via
+                    guardrails & filters.
+                </li>
+                <li><strong>Honda Motorcycle & Scooter India Private Limited:</strong> Utilized advanced NLP to analyze
+                    customer sentiment from social media/reviews, generating insights for product development,
+                    marketing, and customer satisfaction.
+                </li>
+                <li><strong>Mercedes-Benz R&D India:</strong> Developed a multilingual translation framework fine-tuning
+                    GenAI models (Flan T5, MarianMT, Fairseq) on diverse datasets (OPUS, Huggingface) for key domains;
+                    achieved 75-80% manhour savings and 73.7% BLEU accuracy, enabling faster global content rollout.
+                </li>
+            </ul>
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Aviation / Transportation</h4>
+            <ul>
+                <li><strong>BIAL (Bangalore International Airport):</strong> Developed PoCs demonstrating Generative AI
+                    solutions to enhance passenger experience, automated social media analysis, advanced chatbot Q&A
+                    capabilities, and AI-driven avatars for digital kiosks.
+                </li>
+            </ul>
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure &
+                Automation</h4>
+            <ul>
+                <li><strong>Kaiser Permanente:</strong> Engineered an AI solution to automate Kubernetes Kustomize
+                    overlay creation, employing AI for discovery, template definition, and INI file generation based on
+                    existing overlays to enhance deployment consistency and efficiency.
+                </li>
+            </ul>
+            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
+
+            <!-- IBM -->
+            <h3>IBM India Pvt. Ltd., Bangalore</h3>
+            <div class="job-role">
+                <span class="job-title">Cloud Solutions Architect / Software Engineer</span>
+                <span class="job-duration">March 2011 - Dec 2022</span>
+            </div>
+            <!-- Sector Groupings for IBM -->
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Platform Development &
+                Modernization</h4>
+            <ul>
+                <li>Served as lead developer for the IBM Software Defined Modernization platform, contributing to core
+                    architecture and feature implementation for enterprise application migration.
+                </li>
+            </ul>
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Security & Identity</h4>
+            <ul>
+                <li>Architected a robust Digital Identity Verification solution incorporating document scanning and
+                    facial recognition technologies.
+                </li>
+            </ul>
+            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
+
+            <!-- KPIT -->
+            <h3>KPIT Cummins Infosystems Ltd., Bangalore</h3>
+            <div class="job-role">
+                <span class="job-title">Subject Matter Expert</span>
+                <span class="job-duration">Nov 2009 - Mar 2011</span>
+            </div>
+            <!-- Grouping for KPIT (If applicable, otherwise just list points) -->
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Technical Support (SME)</h4>
+            <ul>
+                <li>Provided expert-level technical troubleshooting and resolution across firmware, middleware, and
+                    application software layers for key enterprise clients.
+                </li>
+            </ul>
+            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
+
+            <!-- HPE -->
+            <h3>Hewlett Packard Enterprise, Bangalore</h3>
+            <div class="job-role">
+                <span class="job-title">Technical Solutions Engineer</span>
+                <span class="job-duration">May 2007 - Nov 2009</span>
+            </div>
+            <!-- Grouping for HPE -->
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Infrastructure & Virtualization
+                Support</h4>
+            <ul>
+                <li>Delivered specialized technical support for HP Business Critical Enterprise clients, focusing on the
+                    VMware virtualization platform and related infrastructure.
+                </li>
+            </ul>
+            <hr style="margin: 25px 0;"> <!-- Separator before next company -->
+
+            <!-- NIRD -->
+            <h3>National Institute of Rural Development, Hyderabad</h3>
+            <div class="job-role">
+                <span class="job-title">Software Engineer</span>
+                <span class="job-duration">June 2000 - Sep 2002</span>
+            </div>
+            <!-- Grouping for NIRD -->
+            <h4 style="margin-top: 15px; color: var(--primary-color); font-weight: 500;">Web Development (Government
+                Sector)</h4>
+            <ul>
+                <li>Led the design, development, and ongoing maintenance of the institution's primary web portal,
+                    enhancing information dissemination.
+                </li>
+            </ul>
+        </div> <!-- End section-content for experience -->
+    </div> <!-- End section for experience -->
+
+    <!-- Education Section -->
+    <div class="section">
+        <h2 class="section-title" onclick="toggleSection('education', this)" aria-expanded="false"
+            aria-controls="education">
+            Education <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </h2>
+        <div class="section-content" id="education">
+            <ul>
+                <li>
+                    <div class="education-item">
+                        <span class="degree">PGDBA, AI/ML</span>
+                        <span class="duration">2024 - Present</span>
+                    </div>
+                    <span class="institution">IIIT, Bangalore</span>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="degree">PGDBA, Software Engineering</span>
+                        <span class="duration">2019 - 2020</span>
+                    </div>
+                    <span class="institution">IIIT, Bangalore</span>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="degree">M.S. Information Technology</span>
+                        <span class="duration">2003 - 2005</span>
+                    </div>
+                    <span class="institution">University of Southern Queensland, Australia</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section">
+        <h2 class="section-title" onclick="toggleSection('certifications', this)" aria-expanded="false"
+            aria-controls="certifications">
+            Certifications <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </h2>
+        <div class="section-content" id="certifications">
+            <ul>
+                <li>Open Group Certified Solution Architect (Open CA)</li>
+                <li>Cisco Certified</li>
+                <li>VMware Certified Professional</li>
+                <li>RedHat Certified</li>
+                <li>HashiCorp Certified: Terraform Associate</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Anil Narayanan</p>
+        <div class="footer-links">
+            <a href="https://github.com/anilnarayanan" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/aknaraya" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function toggleSection(id, headerElement) {
+        const sectionContent = document.getElementById(id);
+        const isExpanded = sectionContent.style.display === 'block';
+        const icon = headerElement.querySelector('.toggle-icon i');
+
+        if (isExpanded) {
+            sectionContent.style.display = 'none';
+            headerElement.setAttribute('aria-expanded', 'false');
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            sectionContent.style.display = 'block'; // Or 'grid'/'flex' if needed, but 'block' usually works
+            // Special case for skills grid layout
+            if (id === 'skills') {
+                sectionContent.style.display = 'block'; // Keep it block, the container inside handles grid
             }
+            headerElement.setAttribute('aria-expanded', 'true');
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
         }
+    }
 
-        function copyToClipboard(text, element) {
-            // Use the Clipboard API for modern browsers
-            navigator.clipboard.writeText(text).then(() => {
-                // Find the sibling "Copied!" message relative to the clicked icon (element)
-                const copiedMessage = element.nextElementSibling; // Assumes message is immediate sibling
+    function copyToClipboard(text, element) {
+        // Use the Clipboard API for modern browsers
+        navigator.clipboard.writeText(text).then(() => {
+            // Find the sibling "Copied!" message relative to the clicked icon (element)
+            const copiedMessage = element.nextElementSibling; // Assumes message is immediate sibling
+            if (copiedMessage && copiedMessage.classList.contains('copied-message')) {
+                copiedMessage.classList.add('show'); // Add class to trigger transition
+
+                // Hide the message after 1.5 seconds
+                setTimeout(() => {
+                    copiedMessage.classList.remove('show'); // Remove class to fade out
+                }, 1500);
+            }
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+            // Fallback for older browsers (less common now)
+            try {
+                const tempInput = document.createElement("textarea");
+                tempInput.style.position = "absolute";
+                tempInput.style.left = "-9999px";
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                // Show feedback (using the same mechanism)
+                const copiedMessage = element.nextElementSibling;
                 if (copiedMessage && copiedMessage.classList.contains('copied-message')) {
-                    copiedMessage.classList.add('show'); // Add class to trigger transition
-
-                    // Hide the message after 1.5 seconds
+                    copiedMessage.classList.add('show');
                     setTimeout(() => {
-                        copiedMessage.classList.remove('show'); // Remove class to fade out
+                        copiedMessage.classList.remove('show');
                     }, 1500);
                 }
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-                // Fallback for older browsers (less common now)
-                try {
-                    const tempInput = document.createElement("textarea");
-                    tempInput.style.position = "absolute";
-                    tempInput.style.left = "-9999px";
-                    tempInput.value = text;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(tempInput);
-
-                    // Show feedback (using the same mechanism)
-                    const copiedMessage = element.nextElementSibling;
-                    if (copiedMessage && copiedMessage.classList.contains('copied-message')) {
-                        copiedMessage.classList.add('show');
-                        setTimeout(() => {
-                            copiedMessage.classList.remove('show');
-                        }, 1500);
-                    }
-                } catch (e) {
-                    console.error('Fallback copy method failed:', e);
-                    alert("Failed to copy. Please copy manually."); // Basic feedback
-                }
-            });
-        }
-
-        // Optional: Expand key sections by default on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            // Example: Expand Skills and Experience by default
-            const skillsHeader = document.querySelector('h2[aria-controls="skills"]');
-            const experienceHeader = document.querySelector('h2[aria-controls="experience"]');
-
-            if (skillsHeader) {
-                toggleSection('skills', skillsHeader);
-            }
-            if (experienceHeader) {
-                toggleSection('experience', experienceHeader);
+            } catch (e) {
+                console.error('Fallback copy method failed:', e);
+                alert("Failed to copy. Please copy manually."); // Basic feedback
             }
         });
-    </script>
+    }
+
+    // Optional: Expand key sections by default on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        // Example: Expand Skills and Experience by default
+        const skillsHeader = document.querySelector('h2[aria-controls="skills"]');
+        const experienceHeader = document.querySelector('h2[aria-controls="experience"]');
+
+        if (skillsHeader) {
+            toggleSection('skills', skillsHeader);
+        }
+        if (experienceHeader) {
+            toggleSection('experience', experienceHeader);
+        }
+    });
+</script>
 </body>
 
 </html>
