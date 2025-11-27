@@ -52,13 +52,14 @@
                 <a href="https://github.com/anilnarayanan" target="_blank" class="contact-item">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <button onclick="openModal()" class="contact-item"
-                    style="cursor: pointer; background: var(--accent-color); color: white; border: none;">
-                    <i class="fas fa-paper-plane" style="color: white;"></i> Message Me
+            </div>
+
+            <div class="hero-actions">
+                <button onclick="openModal()" class="cta-button primary">
+                    <i class="fas fa-paper-plane"></i> Message Me
                 </button>
-                <a href="Anil_Narayanan.pdf" download class="contact-item"
-                    style="cursor: pointer; background: var(--accent-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">
-                    <i class="fas fa-download" style="color: white;"></i> Download Resume
+                <a href="Anil_Narayanan.pdf" download class="cta-button secondary">
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
             </div>
         </header>
@@ -297,7 +298,7 @@
         const icon = themeToggle.querySelector('i');
 
         // Check for saved preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', savedTheme);
         updateIcon(savedTheme);
 
