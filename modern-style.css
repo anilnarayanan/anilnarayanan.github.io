@@ -318,6 +318,67 @@ a.contact-item[download]:hover {
     box-shadow: var(--shadow-glow);
 }
 
+/* ========== HERO ACTIONS ========== */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.cta-button:hover i {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.cta-button.primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-color);
+}
+
+.cta-button.secondary {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--accent-blue);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.cta-button.secondary:hover {
+    background: var(--bg-secondary);
+    border-color: var(--accent-purple);
+}
+
 /* ========== SECTIONS ========== */
 section {
     margin-bottom: 4rem;
